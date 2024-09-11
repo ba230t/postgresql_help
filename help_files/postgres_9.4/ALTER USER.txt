@@ -1,0 +1,25 @@
+Command:     ALTER USER
+Description: change a database role
+Syntax:
+ALTER USER name [ [ WITH ] option [ ... ] ]
+
+where option can be:
+
+      SUPERUSER | NOSUPERUSER
+    | CREATEDB | NOCREATEDB
+    | CREATEROLE | NOCREATEROLE
+    | CREATEUSER | NOCREATEUSER
+    | INHERIT | NOINHERIT
+    | LOGIN | NOLOGIN
+    | REPLICATION | NOREPLICATION
+    | CONNECTION LIMIT connlimit
+    | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'password'
+    | VALID UNTIL 'timestamp'
+
+ALTER USER name RENAME TO new_name
+
+ALTER USER { name | ALL } [ IN DATABASE database_name ] SET configuration_parameter { TO | = } { value | DEFAULT }
+ALTER USER { name | ALL } [ IN DATABASE database_name ] SET configuration_parameter FROM CURRENT
+ALTER USER { name | ALL } [ IN DATABASE database_name ] RESET configuration_parameter
+ALTER USER { name | ALL } [ IN DATABASE database_name ] RESET ALL
+

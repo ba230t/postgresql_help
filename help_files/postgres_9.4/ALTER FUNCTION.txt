@@ -1,0 +1,24 @@
+Command:     ALTER FUNCTION
+Description: change the definition of a function
+Syntax:
+ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )
+    action [ ... ] [ RESTRICT ]
+ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )
+    RENAME TO new_name
+ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )
+    OWNER TO new_owner
+ALTER FUNCTION name ( [ [ argmode ] [ argname ] argtype [, ...] ] )
+    SET SCHEMA new_schema
+
+where action is one of:
+
+    CALLED ON NULL INPUT | RETURNS NULL ON NULL INPUT | STRICT
+    IMMUTABLE | STABLE | VOLATILE | [ NOT ] LEAKPROOF
+    [ EXTERNAL ] SECURITY INVOKER | [ EXTERNAL ] SECURITY DEFINER
+    COST execution_cost
+    ROWS result_rows
+    SET configuration_parameter { TO | = } { value | DEFAULT }
+    SET configuration_parameter FROM CURRENT
+    RESET configuration_parameter
+    RESET ALL
+

@@ -1,0 +1,17 @@
+Command:     CREATE FOREIGN TABLE
+Description: define a new foreign table
+Syntax:
+CREATE FOREIGN TABLE [ IF NOT EXISTS ] table_name ( [
+    column_name data_type [ OPTIONS ( option 'value' [, ... ] ) ] [ COLLATE collation ] [ column_constraint [ ... ] ]
+    [, ... ]
+] )
+  SERVER server_name
+[ OPTIONS ( option 'value' [, ... ] ) ]
+
+where column_constraint is:
+
+[ CONSTRAINT constraint_name ]
+{ NOT NULL |
+  NULL |
+  DEFAULT default_expr }
+

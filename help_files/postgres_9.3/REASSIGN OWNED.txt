@@ -1,0 +1,5 @@
+Command:     REASSIGN OWNED
+Description: change the ownership of database objects owned by a database role
+Syntax:
+REASSIGN OWNED BY old_role [, ...] TO new_role
+

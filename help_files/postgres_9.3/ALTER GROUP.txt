@@ -1,0 +1,8 @@
+Command:     ALTER GROUP
+Description: change role name or membership
+Syntax:
+ALTER GROUP group_name ADD USER user_name [, ... ]
+ALTER GROUP group_name DROP USER user_name [, ... ]
+
+ALTER GROUP group_name RENAME TO new_name
+

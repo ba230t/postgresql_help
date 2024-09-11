@@ -1,0 +1,8 @@
+Command:     CREATE SCHEMA
+Description: define a new schema
+Syntax:
+CREATE SCHEMA schema_name [ AUTHORIZATION user_name ] [ schema_element [ ... ] ]
+CREATE SCHEMA AUTHORIZATION user_name [ schema_element [ ... ] ]
+CREATE SCHEMA IF NOT EXISTS schema_name [ AUTHORIZATION user_name ]
+CREATE SCHEMA IF NOT EXISTS AUTHORIZATION user_name
+
