@@ -21,7 +21,7 @@ else
     PROCESSED_VERSIONS=""
 fi
 
-COUNTER = 0
+COUNTER=0
 echo "Starting containers..."
 for VERSION in $VERSIONS; do
     # Skip already processed versions
