@@ -1,0 +1,15 @@
+Command:     CREATE PUBLICATION
+Description: define a new publication
+Syntax:
+CREATE PUBLICATION name
+    [ FOR ALL TABLES
+      | FOR publication_object [, ... ] ]
+    [ WITH ( publication_parameter [= value] [, ... ] ) ]
+
+where publication_object is one of:
+
+    TABLE [ ONLY ] table_name [ * ] [ ( column_name [, ... ] ) ] [ WHERE ( expression ) ] [, ... ]
+    TABLES IN SCHEMA { schema_name | CURRENT_SCHEMA } [, ... ]
+
+URL: https://www.postgresql.org/docs/16/sql-createpublication.html
+
