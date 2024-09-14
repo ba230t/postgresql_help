@@ -1,6 +1,7 @@
 # PostgreSQL Help
 
-Flask app for comparing help contents of different versions of PostgreSQL.
+Flask app for comparing help contents of different versions of PostgreSQL.  
+Hosted on https://postgresql-help.onrender.com/.
 
 Something like this:
 ```
