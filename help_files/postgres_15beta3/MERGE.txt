@@ -1,0 +1,34 @@
+Command:     MERGE
+Description: conditionally insert, update, or delete rows of a table
+Syntax:
+[ WITH with_query [, ...] ]
+MERGE INTO target_table_name [ [ AS ] target_alias ]
+USING data_source ON join_condition
+when_clause [...]
+
+where data_source is:
+
+{ source_table_name | ( source_query ) } [ [ AS ] source_alias ]
+
+and when_clause is:
+
+{ WHEN MATCHED [ AND condition ] THEN { merge_update | merge_delete | DO NOTHING } |
+  WHEN NOT MATCHED [ AND condition ] THEN { merge_insert | DO NOTHING } }
+
+and merge_insert is:
+
+INSERT [( column_name [, ...] )]
+[ OVERRIDING { SYSTEM | USER } VALUE ]
+{ VALUES ( { expression | DEFAULT } [, ...] ) | DEFAULT VALUES }
+
+and merge_update is:
+
+UPDATE SET { column_name = { expression | DEFAULT } |
+             ( column_name [, ...] ) = ( { expression | DEFAULT } [, ...] ) } [, ...]
+
+and merge_delete is:
+
+DELETE
+
+URL: https://www.postgresql.org/docs/15/sql-merge.html
+
