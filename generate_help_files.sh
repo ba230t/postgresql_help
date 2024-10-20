@@ -44,7 +44,7 @@ for VERSION in $VERSIONS; do
 
     # Wait for the PostgreSQL server to start
     echo "Waiting for PostgreSQL server in container $CONTAINER_NAME to start..."
-    until docker exec -i $CONTAINER_NAME pg_isready -U $PG_USER > /dev/null 2>&1; do
+    until docker exec -i $CONTAINER_NAME psql -U $PG_USER -c "SELECT 1" > /dev/null 2>&1; do
         sleep 1
     done
     echo "PostgreSQL server in container $CONTAINER_NAME is ready."
