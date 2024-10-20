@@ -21,6 +21,8 @@ else
     PROCESSED_VERSIONS=""
 fi
 
+SKIP_VERSIONS="9.0\n8.4"
+
 COUNTER=0
 echo "Starting containers..."
 for VERSION in $VERSIONS; do
@@ -29,7 +31,13 @@ for VERSION in $VERSIONS; do
         echo "Version $VERSION already processed, skipping..."
         continue
     fi
-
+    
+    # Skip old versions
+    if echo -e "$SKIP_VERSIONS" | grep -q "$VERSION"; then
+        echo "Skip version $VERSION"
+        continue
+    fi
+    
     # Process up to 3 versions at once
     COUNTER=$((COUNTER+1))
     if [ $COUNTER -gt 3 ]; then
