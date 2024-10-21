@@ -1,0 +1,25 @@
+Command:     ALTER ROLE
+Description: change a database role
+Syntax:
+ALTER ROLE name [ [ WITH ] option [ ... ] ]
+
+where option can be:
+
+      SUPERUSER | NOSUPERUSER
+    | CREATEDB | NOCREATEDB
+    | CREATEROLE | NOCREATEROLE
+    | CREATEUSER | NOCREATEUSER
+    | INHERIT | NOINHERIT
+    | LOGIN | NOLOGIN
+    | REPLICATION | NOREPLICATION
+    | CONNECTION LIMIT connlimit
+    | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'password'
+    | VALID UNTIL 'timestamp'
+
+ALTER ROLE name RENAME TO new_name
+
+ALTER ROLE name [ IN DATABASE database_name ] SET configuration_parameter { TO | = } { value | DEFAULT }
+ALTER ROLE name [ IN DATABASE database_name ] SET configuration_parameter FROM CURRENT
+ALTER ROLE name [ IN DATABASE database_name ] RESET configuration_parameter
+ALTER ROLE name [ IN DATABASE database_name ] RESET ALL
+

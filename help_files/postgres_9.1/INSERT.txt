@@ -1,0 +1,8 @@
+Command:     INSERT
+Description: create new rows in a table
+Syntax:
+[ WITH [ RECURSIVE ] with_query [, ...] ]
+INSERT INTO table [ ( column [, ...] ) ]
+    { DEFAULT VALUES | VALUES ( { expression | DEFAULT } [, ...] ) [, ...] | query }
+    [ RETURNING * | output_expression [ [ AS ] output_name ] [, ...] ]
+

@@ -1,0 +1,8 @@
+Command:     ALTER INDEX
+Description: change the definition of an index
+Syntax:
+ALTER INDEX name RENAME TO new_name
+ALTER INDEX name SET TABLESPACE tablespace_name
+ALTER INDEX name SET ( storage_parameter = value [, ... ] )
+ALTER INDEX name RESET ( storage_parameter [, ... ] )
+

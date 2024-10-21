@@ -1,0 +1,5 @@
+Command:     DROP AGGREGATE
+Description: remove an aggregate function
+Syntax:
+DROP AGGREGATE [ IF EXISTS ] name ( type [ , ... ] ) [ CASCADE | RESTRICT ]
+

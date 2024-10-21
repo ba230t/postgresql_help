@@ -1,0 +1,21 @@
+Command:     ALTER FOREIGN TABLE
+Description: change the definition of a foreign table
+Syntax:
+ALTER FOREIGN TABLE name
+    action [, ... ]
+ALTER FOREIGN TABLE name
+    RENAME [ COLUMN ] column TO new_column
+ALTER FOREIGN TABLE name
+    RENAME TO new_name
+ALTER FOREIGN TABLE name
+    SET SCHEMA new_schema
+
+where action is one of:
+
+    ADD [ COLUMN ] column type [ NULL | NOT NULL ]
+    DROP [ COLUMN ] [ IF EXISTS ] column [ RESTRICT | CASCADE ]
+    ALTER [ COLUMN ] column [ SET DATA ] TYPE type
+    ALTER [ COLUMN ] column { SET | DROP } NOT NULL
+    OWNER TO new_owner
+    OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ])
+

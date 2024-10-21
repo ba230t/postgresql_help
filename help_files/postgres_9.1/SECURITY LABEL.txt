@@ -1,0 +1,19 @@
+Command:     SECURITY LABEL
+Description: define or change a security label applied to an object
+Syntax:
+SECURITY LABEL [ FOR provider ] ON
+{
+  TABLE object_name |
+  COLUMN table_name.column_name |
+  AGGREGATE agg_name (agg_type [, ...] ) |
+  DOMAIN object_name |
+  FOREIGN TABLE object_name
+  FUNCTION function_name ( [ [ argmode ] [ argname ] argtype [, ...] ] ) |
+  LARGE OBJECT large_object_oid |
+  [ PROCEDURAL ] LANGUAGE object_name |
+  SCHEMA object_name |
+  SEQUENCE object_name |
+  TYPE object_name |
+  VIEW object_name
+} IS 'label'
+

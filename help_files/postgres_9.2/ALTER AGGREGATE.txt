@@ -1,0 +1,7 @@
+Command:     ALTER AGGREGATE
+Description: change the definition of an aggregate function
+Syntax:
+ALTER AGGREGATE name ( argtype [ , ... ] ) RENAME TO new_name
+ALTER AGGREGATE name ( argtype [ , ... ] ) OWNER TO new_owner
+ALTER AGGREGATE name ( argtype [ , ... ] ) SET SCHEMA new_schema
+

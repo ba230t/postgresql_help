@@ -1,0 +1,22 @@
+Command:     CREATE AGGREGATE
+Description: define a new aggregate function
+Syntax:
+CREATE AGGREGATE name ( input_data_type [ , ... ] ) (
+    SFUNC = sfunc,
+    STYPE = state_data_type
+    [ , FINALFUNC = ffunc ]
+    [ , INITCOND = initial_condition ]
+    [ , SORTOP = sort_operator ]
+)
+
+or the old syntax
+
+CREATE AGGREGATE name (
+    BASETYPE = base_type,
+    SFUNC = sfunc,
+    STYPE = state_data_type
+    [ , FINALFUNC = ffunc ]
+    [ , INITCOND = initial_condition ]
+    [ , SORTOP = sort_operator ]
+)
+

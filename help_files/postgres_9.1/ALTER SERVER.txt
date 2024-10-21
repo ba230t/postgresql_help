@@ -1,0 +1,7 @@
+Command:     ALTER SERVER
+Description: change the definition of a foreign server
+Syntax:
+ALTER SERVER server_name [ VERSION 'new_version' ]
+    [ OPTIONS ( [ ADD | SET | DROP ] option ['value'] [, ... ] ) ]
+ALTER SERVER server_name OWNER TO new_owner
+

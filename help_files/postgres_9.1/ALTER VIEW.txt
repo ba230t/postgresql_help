@@ -1,0 +1,9 @@
+Command:     ALTER VIEW
+Description: change the definition of a view
+Syntax:
+ALTER VIEW name ALTER [ COLUMN ] column SET DEFAULT expression
+ALTER VIEW name ALTER [ COLUMN ] column DROP DEFAULT
+ALTER VIEW name OWNER TO new_owner
+ALTER VIEW name RENAME TO new_name
+ALTER VIEW name SET SCHEMA new_schema
+

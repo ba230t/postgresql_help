@@ -1,0 +1,5 @@
+Command:     REINDEX
+Description: rebuild indexes
+Syntax:
+REINDEX { INDEX | TABLE | DATABASE | SYSTEM } name [ FORCE ]
+

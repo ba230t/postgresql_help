@@ -1,0 +1,7 @@
+Command:     ALTER OPERATOR CLASS
+Description: change the definition of an operator class
+Syntax:
+ALTER OPERATOR CLASS name USING index_method RENAME TO new_name
+ALTER OPERATOR CLASS name USING index_method OWNER TO new_owner
+ALTER OPERATOR CLASS name USING index_method SET SCHEMA new_schema
+

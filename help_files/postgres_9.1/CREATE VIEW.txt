@@ -1,0 +1,6 @@
+Command:     CREATE VIEW
+Description: define a new view
+Syntax:
+CREATE [ OR REPLACE ] [ TEMP | TEMPORARY ] VIEW name [ ( column_name [, ...] ) ]
+    AS query
+

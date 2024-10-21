@@ -1,0 +1,10 @@
+Command:     CREATE FOREIGN TABLE
+Description: define a new foreign table
+Syntax:
+CREATE FOREIGN TABLE [ IF NOT EXISTS ] table_name ( [
+  { column_name data_type [ OPTIONS ( option 'value' [, ... ] ) ] [ NULL | NOT NULL ] }
+    [, ... ]
+] )
+  SERVER server_name
+[ OPTIONS ( option 'value' [, ... ] ) ]
+

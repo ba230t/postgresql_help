@@ -1,0 +1,5 @@
+Command:     CREATE TABLESPACE
+Description: define a new tablespace
+Syntax:
+CREATE TABLESPACE tablespace_name [ OWNER user_name ] LOCATION 'directory'
+

@@ -1,0 +1,16 @@
+Command:     ALTER DOMAIN
+Description: change the definition of a domain
+Syntax:
+ALTER DOMAIN name
+    { SET DEFAULT expression | DROP DEFAULT }
+ALTER DOMAIN name
+    { SET | DROP } NOT NULL
+ALTER DOMAIN name
+    ADD domain_constraint
+ALTER DOMAIN name
+    DROP CONSTRAINT constraint_name [ RESTRICT | CASCADE ]
+ALTER DOMAIN name
+    OWNER TO new_owner
+ALTER DOMAIN name
+    SET SCHEMA new_schema
+
