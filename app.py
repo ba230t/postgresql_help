@@ -16,11 +16,18 @@ app = Flask(__name__)
 
 def version_key(version):
     """
-    ["12.1", "12.10", "12.9", "12beta2"]
-    ↓
-    ["12.1", "12.9", "12.10", "12beta2"]
+    Convert version to a tuple for stable sorting.
     """
-    return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", version)]
+    m = re.match(r"(\d+)(?:\.(\d+))?(beta|rc)?(\d+)?", version)
+    major = int(m.group(1))
+    minor = int(m.group(2) or 0)
+    stage = m.group(3) or "final"
+    stage_num = int(m.group(4) or 0)
+
+    # beta(0) < rc(1) < final(2)
+    stage_order = {"beta": 0, "rc": 1, "final": 2}
+
+    return (major, stage_order[stage], minor, stage_num)
 
 
 def get_postgresql_versions():
