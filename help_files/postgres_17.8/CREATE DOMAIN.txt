@@ -1,0 +1,15 @@
+Command:     CREATE DOMAIN
+Description: define a new domain
+Syntax:
+CREATE DOMAIN name [ AS ] data_type
+    [ COLLATE collation ]
+    [ DEFAULT expression ]
+    [ domain_constraint [ ... ] ]
+
+where domain_constraint is:
+
+[ CONSTRAINT constraint_name ]
+{ NOT NULL | NULL | CHECK (expression) }
+
+URL: https://www.postgresql.org/docs/17/sql-createdomain.html
+
