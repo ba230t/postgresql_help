@@ -1,0 +1,11 @@
+Command:     CREATE FOREIGN DATA WRAPPER
+Description: define a new foreign-data wrapper
+Syntax:
+CREATE FOREIGN DATA WRAPPER name
+    [ HANDLER handler_function | NO HANDLER ]
+    [ VALIDATOR validator_function | NO VALIDATOR ]
+    [ CONNECTION connection_function | NO CONNECTION ]
+    [ OPTIONS ( option 'value' [, ... ] ) ]
+
+URL: https://www.postgresql.org/docs/19/sql-createforeigndatawrapper.html
+
