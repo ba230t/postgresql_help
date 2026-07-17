@@ -1,0 +1,35 @@
+Command:     ALTER PROPERTY GRAPH
+Description: change the definition of an SQL-property graph
+Syntax:
+ALTER PROPERTY GRAPH name ADD
+    [ {VERTEX|NODE} TABLES ( vertex_table_definition [, ...] ) ]
+    [ {EDGE|RELATIONSHIP} TABLES ( edge_table_definition [, ...] ) ]
+
+ALTER PROPERTY GRAPH name DROP
+    {VERTEX|NODE} TABLES ( vertex_table_alias [, ...] ) [ CASCADE | RESTRICT ]
+
+ALTER PROPERTY GRAPH name DROP
+    {EDGE|RELATIONSHIP} TABLES ( edge_table_alias [, ...] ) [ CASCADE | RESTRICT ]
+
+ALTER PROPERTY GRAPH name ALTER
+    {VERTEX|NODE|EDGE|RELATIONSHIP} TABLE element_table_alias
+    { ADD LABEL label_name [ NO PROPERTIES | PROPERTIES ALL COLUMNS | PROPERTIES ( { expression [ AS property_name ] } [, ...] ) ] } [ ... ]
+
+ALTER PROPERTY GRAPH name ALTER
+    {VERTEX|NODE|EDGE|RELATIONSHIP} TABLE element_table_alias
+    DROP LABEL label_name [ CASCADE | RESTRICT ]
+
+ALTER PROPERTY GRAPH name ALTER
+    {VERTEX|NODE|EDGE|RELATIONSHIP} TABLE element_table_alias
+    ALTER LABEL label_name ADD PROPERTIES ( { expression [ AS property_name ] } [, ...] )
+
+ALTER PROPERTY GRAPH name ALTER
+    {VERTEX|NODE|EDGE|RELATIONSHIP} TABLE element_table_alias
+    ALTER LABEL label_name DROP PROPERTIES ( property_name [, ...] ) [ CASCADE | RESTRICT ]
+
+ALTER PROPERTY GRAPH name OWNER TO { new_owner | CURRENT_USER | SESSION_USER }
+ALTER PROPERTY GRAPH name RENAME TO new_name
+ALTER PROPERTY GRAPH [ IF EXISTS ] name SET SCHEMA new_schema
+
+URL: https://www.postgresql.org/docs/19/sql-alter-property-graph.html
+
