@@ -1,0 +1,28 @@
+Command:     CREATE PROPERTY GRAPH
+Description: define a new SQL-property graph
+Syntax:
+CREATE [ TEMP | TEMPORARY ] PROPERTY GRAPH name
+    [ {VERTEX|NODE} TABLES ( vertex_table_definition [, ...] ) ]
+    [ {EDGE|RELATIONSHIP} TABLES ( edge_table_definition [, ...] ) ]
+
+where vertex_table_definition is:
+
+    vertex_table_name [ AS alias ] [ KEY ( column_name [, ...] ) ] [ element_table_label_and_properties ]
+
+and edge_table_definition is:
+
+    edge_table_name [ AS alias ] [ KEY ( column_name [, ...] ) ]
+        SOURCE [ KEY ( column_name [, ...] ) REFERENCES ] source_table [ ( column_name [, ...] ) ]
+        DESTINATION [ KEY ( column_name [, ...] ) REFERENCES ] dest_table [ ( column_name [, ...] ) ]
+        [ element_table_label_and_properties ]
+
+and element_table_label_and_properties is either:
+
+    NO PROPERTIES | PROPERTIES ALL COLUMNS | PROPERTIES ( { expression [ AS property_name ] } [, ...] )
+
+or:
+
+   { { LABEL label_name | DEFAULT LABEL } [ NO PROPERTIES | PROPERTIES ALL COLUMNS | PROPERTIES ( { expression [ AS property_name ] } [, ...] ) ] } [...]
+
+URL: https://www.postgresql.org/docs/19/sql-create-property-graph.html
+

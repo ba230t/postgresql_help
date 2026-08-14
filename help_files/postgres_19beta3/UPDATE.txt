@@ -1,0 +1,23 @@
+Command:     UPDATE
+Description: update rows of a table
+Syntax:
+[ WITH [ RECURSIVE ] with_query [, ...] ]
+UPDATE [ ONLY ] table_name [ * ]
+    [ FOR PORTION OF range_column_name for_portion_of_target ]
+    [ [ AS ] alias ]
+    SET { column_name = { expression | DEFAULT } |
+          ( column_name [, ...] ) = [ ROW ] ( { expression | DEFAULT } [, ...] ) |
+          ( column_name [, ...] ) = ( sub-SELECT )
+        } [, ...]
+    [ FROM from_item [, ...] ]
+    [ WHERE condition | WHERE CURRENT OF cursor_name ]
+    [ RETURNING [ WITH ( { OLD | NEW } AS output_alias [, ...] ) ]
+                { * | output_expression [ [ AS ] output_name ] } [, ...] ]
+
+where for_portion_of_target is:
+
+{ FROM start_time TO end_time |
+  ( portion ) }
+
+URL: https://www.postgresql.org/docs/19/sql-update.html
+

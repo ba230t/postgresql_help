@@ -1,0 +1,31 @@
+Command:     COPY
+Description: copy data between a file and a table
+Syntax:
+COPY table_name [ ( column_name [, ...] ) ]
+    FROM { 'filename' | PROGRAM 'command' | STDIN }
+    [ [ WITH ] ( option [, ...] ) ]
+    [ WHERE condition ]
+
+COPY { table_name [ ( column_name [, ...] ) ] | ( query ) }
+    TO { 'filename' | PROGRAM 'command' | STDOUT }
+    [ [ WITH ] ( option [, ...] ) ]
+
+where option can be one of:
+
+    FORMAT format_name
+    FREEZE [ boolean ]
+    DELIMITER 'delimiter_character'
+    NULL 'null_string'
+    DEFAULT 'default_string'
+    HEADER [ boolean | MATCH ]
+    QUOTE 'quote_character'
+    ESCAPE 'escape_character'
+    FORCE_QUOTE { ( column_name [, ...] ) | * }
+    FORCE_NOT_NULL { ( column_name [, ...] ) | * }
+    FORCE_NULL { ( column_name [, ...] ) | * }
+    ON_ERROR error_action
+    ENCODING 'encoding_name'
+    LOG_VERBOSITY verbosity
+
+URL: https://www.postgresql.org/docs/17/sql-copy.html
+
