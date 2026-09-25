@@ -1,0 +1,12 @@
+Command:     CHECKPOINT
+Description: force a write-ahead log checkpoint
+Syntax:
+CHECKPOINT [ ( option [, ...] ) ]
+
+where option can be one of:
+
+    FLUSH_UNLOGGED [ boolean ]
+    MODE { FAST | SPREAD }
+
+URL: https://www.postgresql.org/docs/19/sql-checkpoint.html
+

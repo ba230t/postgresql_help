@@ -1,0 +1,18 @@
+Command:     REPACK
+Description: rewrite a table to reclaim disk space
+Syntax:
+REPACK [ ( option [, ...] ) ] [ table_and_columns [ USING INDEX [ index_name ] ] ]
+REPACK [ ( option [, ...] ) ] USING INDEX
+
+where option can be one of:
+
+    VERBOSE [ boolean ]
+    ANALYZE [ boolean ]
+    CONCURRENTLY [ boolean ]
+
+and table_and_columns is:
+
+    table_name [ ( column_name [, ...] ) ]
+
+URL: https://www.postgresql.org/docs/19/sql-repack.html
+
