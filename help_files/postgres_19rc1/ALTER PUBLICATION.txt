@@ -1,0 +1,39 @@
+Command:     ALTER PUBLICATION
+Description: change the definition of a publication
+Syntax:
+ALTER PUBLICATION name ADD publication_object [, ...]
+ALTER PUBLICATION name DROP publication_drop_object [, ...]
+ALTER PUBLICATION name SET { publication_object [, ...] | publication_all_object [, ... ] }
+ALTER PUBLICATION name SET ( publication_parameter [= value] [, ... ] )
+ALTER PUBLICATION name OWNER TO { new_owner | CURRENT_ROLE | CURRENT_USER | SESSION_USER }
+ALTER PUBLICATION name RENAME TO new_name
+
+where publication_object is one of:
+
+    TABLE table_and_columns [, ... ]
+    TABLES IN SCHEMA { schema_name | CURRENT_SCHEMA } [, ... ]
+
+and publication_all_object is one of:
+
+    ALL TABLES [ EXCEPT ( except_table_object [, ... ] ) ]
+    ALL SEQUENCES
+
+and publication_drop_object is one of:
+
+    TABLE table_object [, ... ]
+    TABLES IN SCHEMA { schema_name | CURRENT_SCHEMA } [, ... ]
+
+and table_and_columns is:
+
+    table_object [ ( column_name [, ... ] ) ] [ WHERE ( expression ) ]
+
+and except_table_object is:
+
+    TABLE table_object [, ... ]
+
+and table_object is:
+
+   [ ONLY ] table_name [ * ]
+
+URL: https://www.postgresql.org/docs/19/sql-alterpublication.html
+
