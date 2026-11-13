@@ -1,0 +1,22 @@
+Command:     EXPLAIN
+Description: show the execution plan of a statement
+Syntax:
+EXPLAIN [ ( option [, ...] ) ] statement
+
+where option can be one of:
+
+    ANALYZE [ boolean ]
+    VERBOSE [ boolean ]
+    COSTS [ boolean ]
+    SETTINGS [ boolean ]
+    GENERIC_PLAN [ boolean ]
+    BUFFERS [ boolean ]
+    SERIALIZE [ { NONE | TEXT | BINARY } ]
+    WAL [ boolean ]
+    TIMING [ boolean ]
+    SUMMARY [ boolean ]
+    MEMORY [ boolean ]
+    FORMAT { TEXT | XML | JSON | YAML }
+
+URL: https://www.postgresql.org/docs/17/sql-explain.html
+
